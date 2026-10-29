@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleur de Luna - Contact 🌙✨</title>
+    <!-- Menghubungkan ke file CSS utama -->
+    <link rel="stylesheet" href="style.css?v=3.2">
+    <style>
+        /* Gaya tambahan khusus agar tata letak halaman Contact semakin rapi */
+        .contact-intro {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-block {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(13, 44, 84, 0.03);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-icon {
+            font-size: 1.8rem;
+            background-color: #fff5f6;
+            padding: 10px;
+            border-radius: 12px;
+            line-height: 1;
+        }
+
+        .info-text h4 {
+            color: #0d2c54;
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .info-text p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Form Kontak Sebelah Kanan */
+        .contact-form-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(13, 44, 84, 0.04);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding-left: 2px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s;
+            background-color: #f8fafc;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #ffb7c5;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(255, 183, 197, 0.2);
+        }
+
+        .btn-send {
+            background-color: #0d2c54;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: all 0.3s;
+        }
+
+        .btn-send:hover {
+            background-color: #ffb7c5;
+            box-shadow: 0 4px 15px rgba(255, 183, 197, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Nama Toko -->
+    <header class="main-header">
+        <h1>Fleur de Luna</h1>
+        <p>A cute bouquet, make you smile 𓍢ִ໋🌷͙֒</p>
+    </header>
+
+    <!-- Navigasi Utama (Sudah ditambahkan menu CONTACT yang aktif) -->
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="products.html">Products</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <!-- Konten Utama Tanpa Box Luar -->
+    <main class="content-section">
+        
+        <span class="cute-badge">Say Hello 𖹭 ֶָ֢</span>
+        <h2 class="section-title">Hubungi Fleur de Luna</h2>
+        
+        <p class="contact-intro">
+            Punya pertanyaan seputar kustom buket bunga, jangkauan pengiriman, atau ingin berdiskusi untuk proyek dekorasi? Kami akan sangat senang mendengar kabar dari Anda!
+        </p>
+
+        <!-- Grid Dua Kolom Kontak -->
+        <div class="contact-grid">
+            
+            <!-- Kolom Kiri: Kartu Informasi -->
+            <div class="contact-info-section">
+                
+                <div class="info-block">
+                    <span class="info-icon">📍</span>
+                    <div class="info-text">
+                        <h4>Lokasi Studio</h4>
+                        <p>Jl. Anggrek Bulan No. 45, Sumurbandung, Bandung, Jawa Barat</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <span class="info-icon">💬</span>
+                    <div class="info-text">
+                        <h4>WhatsApp Chat</h4>
+                        <p>+62 812-3456-7890 (Senin - Sabtu, 09.00 - 18.00 WIB)</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <span class="info-icon">✉️</span>
+                    <div class="info-text">
+                        <h4>Email Hubungan</h4>
+                        <p>hello@fleurdeluna.com</p>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <span class="info-icon">📸</span>
+                    <div class="info-text">
+                        <h4>Instagram</h4>
+                        <p>@fleurdeluna.bouquet</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Kolom Kanan: Formulir Kirim Pesan -->
+            <div class="contact-form-container">
+                <form class="contact-form" onsubmit="kirimPesan(event)">
+                    <div>
+                        <label for="nama_kontak">Nama Anda</label>
+                        <input type="text" id="nama_kontak" placeholder="Tulis nama lengkap Anda" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email_kontak">Alamat Email</label>
+                        <input type="email" id="email_kontak" placeholder="nama@email.com" required>
+                    </div>
+
+                    <div>
+                        <label for="pesan_kontak">Isi Pesan</label>
+                        <textarea id="pesan_kontak" rows="4" placeholder="Tulis pesan atau pertanyaan Anda di sini..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-send">Kirim Pesanan</button>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- JavaScript Sederhana untuk Simulasi Kirim Form -->
+    <script>
+        function kirimPesan(event) {
+            event.preventDefault();
+            const nama = document.getElementById('nama_kontak').value;
+            alert('Halo ' + nama + '! Pesanan atau pesan Anda berhasil dicatat dan siap diteruskan via WhatsApp. ✨');
+            event.target.reset();
+        }
+    </script>
+
+</body>
+</html>

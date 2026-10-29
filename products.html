@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleur de Luna - Products</title>
+    <!-- Versi CSS dinaikkan ke v=3.2 agar sinkron dengan gaya home terbaru -->
+    <link rel="stylesheet" href="style.css?v=3.2">
+</head>
+<body>
+
+    <!-- Header dengan Nama Toko Estetik Baru -->
+    <header class="main-header">
+        <h1>Fleur de Luna</h1>
+        <p>A cute bouquet, make you smile 𓍢ִ໋🌷͙֒</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="profil.html">Profile</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+
+    <main class="content-section">
+        <h2 class="section-title">Best Pick For You 🎀</h2>
+        
+        <div class="item-grid">
+            
+            <!-- Produk 1 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar1.jpeg" alt="Buket 1">
+                </div>
+                <div class="item-details">
+                    <h3>Mix Bouquet</h3>
+                    <span class="product-price">Rp 124.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Mix Bouquet', 'Rp 124.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar2.jpeg" alt="Buket 2">
+                </div>
+                <div class="item-details">
+                    <h3>Romantic Red Roses</h3>
+                    <span class="product-price">Rp 167.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Romantic Red Roses', 'Rp 167.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar3.jpeg" alt="Buket 3">
+                </div>
+                <div class="item-details">
+                    <h3>Sunshine Sunflowers</h3>
+                    <span class="product-price">Rp 199.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Sunshine Sunflowers', 'Rp 199.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 4 (Typo teks parameter fungsi sudah dirapikan) -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar4.jpeg" alt="Buket 4">
+                </div>
+                <div class="item-details">
+                    <h3>Mix Tiny Flowers</h3>
+                    <span class="product-price">Rp 87.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Mix Tiny Flowers', 'Rp 87.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 5 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar5.jpeg" alt="Buket 5">
+                </div>
+                <div class="item-details">
+                    <h3>Pink Lily Bouquet</h3>
+                    <span class="product-price">Rp 98.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Pink Lily Bouquet', 'Rp 98.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 6 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar6.jpeg" alt="Buket 6">
+                </div>
+                <div class="item-details">
+                    <h3>White Lily Bouquet</h3>
+                    <span class="product-price">Rp 98.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('White Lily Bouquet', 'Rp 98.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 7 (Parameter nama yang kosong sudah diisi agar tampil di pop-up) -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar7.jpeg" alt="Buket 7">
+                </div>
+                <div class="item-details">
+                    <h3>Gender Reveal Bouquet</h3>
+                    <span class="product-price">Rp 167.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Gender Reveal Bouquet', 'Rp 167.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 8 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar8.jpeg" alt="Buket 8">
+                </div>
+                <div class="item-details">
+                    <h3>Pinky Rose Bouquet</h3>
+                    <span class="product-price">Rp 89.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Pinky Rose Bouquet', 'Rp 89.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 9 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar9.jpeg" alt="Buket 9">
+                </div>
+                <div class="item-details">
+                    <h3>Green Vintage Bouquet</h3>
+                    <span class="product-price">Rp 99.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Green Vintage Bouquet', 'Rp 99.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 10 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar10.jpeg" alt="Buket 10">
+                </div>
+                <div class="item-details">
+                    <h3>White Flowers Bouquet</h3>
+                    <span class="product-price">Rp 118.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('White Flowers Bouquet', 'Rp 118.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 11 -->
+            <div class="item-frame">
+                <div class="img-wrapper">
+                    <img src="img/gambar11.jpeg" alt="Buket 11">
+                </div>
+                <div class="item-details">
+                    <h3>Blue Rose Bouquet</h3>
+                    <span class="product-price">Rp 89.000</span>
+                    <button class="btn-buy" onclick="bukaPesanan('Blue Rose Bouquet', 'Rp 89.000')">Pesan Sekarang</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==========================================
+         KOTAK TIMBUL PEMESANAN (MODAL POP-UP)
+         ========================================== -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-box">
+            <span class="close-modal" onclick="tutupPesanan()">&times;</span>
+            <h2 id="modalTitle">Detail Buket</h2>
+            <p id="modalPrice">Rp 0</p>
+            
+            <form class="order-form" onsubmit="kirimForm(event)">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" placeholder="Nama lengkap.." required>
+                
+                <label for="whatsapp">Nomor WhatsApp:</label>
+                <input type="tel" id="whatsapp" placeholder="Contoh: 0812345xxx" required>
+                
+                <button type="submit" class="btn-submit">Kirim Pesanan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT KONTROL POP-UP -->
+    <script>
+        const modal = document.getElementById('orderModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrice = document.getElementById('modalPrice');
+
+        function bukaPesanan(nama, harga) {
+            modalTitle.innerText = nama;
+            modalPrice.innerText = harga;
+            modal.style.display = 'flex';
+        }
+
+        function tutupPesanan() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) { tutupPesanan(); }
+        }
+
+        function kirimForm(event) {
+            event.preventDefault();
+            alert('Yay! Pesanan kamu berhasil dicatat!');
+            tutupPesanan();
+        }
+    </script>
+
+</body>
+</html>

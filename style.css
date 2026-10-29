@@ -1,0 +1,397 @@
+/* ==========================================================================
+   1. IMPORT FONTS (Cormorant untuk Judul Mewah & Montserrat untuk Isi Konten Premium)
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 🌟 FONT ISI DIUBAH MENJADI MONTSERRAT (SANGAT ELEGAN & MINIMALIS) */
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+/* ==========================================================================
+   2. BACKGROUND GERAK PASTEL AESTHETIC (Seluruh Halaman Web)
+   ========================================================================== */
+body {
+    background: linear-gradient(-45deg, #f3f7fa, #fff0f3, #f5f0ff, #f7f9fc);
+    background-size: 400% 400%;
+    animation: gerakBackground 15s ease infinite;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+}
+
+@keyframes gerakBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================================================================
+   3. HEADER DENGAN TULISAN TINGGI & GELOMBANG ESTETIK
+   ========================================================================== */
+.main-header {
+    background: linear-gradient(-45deg, #0a192f, #0d2c54, #2a1b4e, #1a3c6d);
+    background-size: 300% 300%;
+    animation: kilauHeader 12s ease infinite;
+    color: #ffffff;
+    text-align: center;
+    padding: 75px 20px 70px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes kilauHeader {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.main-header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: #ffffff; 
+    clip-path: ellipse(60% 100% at 50% 100%);
+}
+
+.main-header h1 {
+    font-family: 'Cormorant Garamond', serif; 
+    font-style: italic;                      
+    font-size: 4.2rem; 
+    font-weight: 500; 
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #ffc2d1;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   4. NAVBAR LUXURY MODERN (Putih Bersih Minimalis)
+   ========================================================================== */
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(13, 44, 84, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    color: #334155;
+    text-decoration: none;
+    padding: 22px 30px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase; /* Menu dibuat huruf kapital semua agar rapi */
+    position: relative;
+    transition: all 0.3s ease;
+    letter-spacing: 1.5px;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #ff6584;
+    font-weight: 600;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #ff6584;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px 2px 0 0;
+}
+
+.navbar a:hover::after, .navbar a.active::after {
+    width: 35px;
+}
+
+/* ==========================================================================
+   5. LAYOUT KONTEN UTAMA
+   ========================================================================== */
+.content-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif; /* Judul Section ikut mewah */
+    font-style: italic;
+    color: #0d2c54;
+    font-size: 2.6rem;
+    margin-bottom: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   6. GAYA UNTUK HALAMAN HOME & PROFILE
+   ========================================================================== */
+.home-container {
+    background: transparent;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.cute-badge {
+    display: inline-block;
+    background-color: #ffe4e9;
+    color: #ff6584;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.promo-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 750px;
+    border-left: 4px solid #ff6584;
+    box-shadow: 0 10px 25px rgba(13, 44, 84, 0.03);
+    text-align: left;
+}
+
+.promo-box h4 {
+    color: #ff6584;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 750px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 180px;
+    padding: 25px 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(13, 44, 84, 0.03);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 30px rgba(13, 44, 84, 0.06);
+}
+
+.feature-card .emoji { font-size: 1.8rem; display: block; margin-bottom: 10px; }
+.feature-card h4 { color: #0d2c54; margin-bottom: 6px; font-size: 1rem; font-weight: 600; }
+.feature-card p { font-size: 0.85rem; color: #667085; line-height: 1.5; }
+
+.btn-go {
+    display: inline-block;
+    background-color: #ffb7c5;
+    color: white;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 183, 197, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-go:hover { 
+    background-color: #0d2c54; 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(13, 44, 84, 0.2);
+}
+
+/* ==========================================================================
+   7. GAYA UNTUK HALAMAN PRODUCTS (Katalog Buket Modern)
+   ========================================================================== */
+.item-grid {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.item-frame {
+    width: 310px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.img-wrapper {
+    width: 100%;
+    border-radius: 20px; /* Sudut lengkung modern minimalis */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(13, 44, 84, 0.05); 
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.img-wrapper img:hover { transform: scale(1.05); }
+.item-details { padding: 18px 0 0 0; }
+
+.item-details h3 { 
+    font-size: 1.1rem; 
+    color: #0d2c54; 
+    margin-bottom: 6px; 
+    font-weight: 500; 
+    letter-spacing: 0.5px;
+}
+
+.product-price {
+    display: block;
+    color: #ff6584; 
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.btn-buy {
+    background-color: #ffb7c5;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(255, 183, 197, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #0d2c54;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(13, 44, 84, 0.2);
+}
+
+/* ==========================================================================
+   8. POP-UP JENDELA TIMBUL (LUXURY POP-UP)
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 44, 84, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px); /* Efek blur kaca blur estetik di background modal */
+}
+
+.modal-box {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(13, 44, 84, 0.15);
+    animation: popModern 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popModern {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    font-size: 1.6rem;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover { color: #ff6584; }
+
+.modal-box h2 { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-style: italic; 
+    color: #0d2c54; 
+    margin-bottom: 6px; 
+    font-size: 1.8rem; 
+}
+.modal-box p { color: #ff6584; font-weight: 700; font-size: 1.05rem; margin-bottom: 25px; }
+
+.order-form { display: flex; flex-direction: column; gap: 16px; text-align: left; }
+.order-form label { font-size: 0.85rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.5px; padding-left: 2px; }
+.order-form input { width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 0.95rem; outline: none; transition: all 0.3s; }
+.order-form input:focus { border-color: #ffb7c5; box-shadow: 0 0 0 3px rgba(255, 183, 197, 0.2); }
+
+.btn-submit {
+    background-color: #0d2c54;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+.btn-submit:hover { background-color: #ffb7c5; box-shadow: 0 4px 15px rgba(255, 183, 197, 0.4); }
+
+/* RESPONSIVE LAYAR HP */
+@media (max-width: 768px) {
+.features-grid, .item-grid {
+flex-direction: column;
+align-items: center;
+}
+}

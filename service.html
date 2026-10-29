@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleur de Luna - Services 🌙✨</title>
+    <!-- Menghubungkan ke file CSS utama -->
+    <link rel="stylesheet" href="style.css?v=3.2">
+    <style>
+        /* Gaya tambahan khusus agar tata letak halaman Service semakin rapi */
+        .service-intro {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(13, 44, 84, 0.04);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(13, 44, 84, 0.08);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #0d2c54;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Nama Toko -->
+    <header class="main-header">
+        <h1>Fleur de Luna</h1>
+        <p>A cute bouquet, make you smile 𓍢ִ໋🌷͙֒</p>
+    </header>
+
+    <!-- Navigasi Utama (Sudah ditambahkan menu SERVICE yang aktif) -->
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="products.html">Products</a>
+        <a href="service.html" class="active">Service</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Konten Utama Tanpa Box Luar -->
+    <main class="content-section">
+        
+        <span class="cute-badge">What We Do Best 🎀</span>
+        <h2 class="section-title">Layanan Terbaik Kami</h2>
+        
+        <p class="service-intro">
+            Fleur de Luna berkomitmen penuh untuk memberikan pengalaman terbaik di setiap momen berharga Anda. Berikut adalah ragam layanan pembuatan buket bunga kustom premium yang bisa Anda pilih:
+        </p>
+
+        <!-- Grid Macam-Macam Layanan -->
+        <div class="service-grid">
+            
+            <!-- Layanan 1 -->
+            <div class="service-card">
+                <span class="service-icon">💐</span>
+                <h3>Hand Bouquet</h3>
+                <p>Buket bunga tangan premium dengan kain pembungkus ala Korea untuk momen wisuda, kado ulang tahun, hingga anniversary yang manis.</p>
+            </div>
+
+            <!-- Layanan 2 -->
+            <div class="service-card">
+                <span class="service-icon">🧸</span>
+                <h3>Custom Gift Box</h3>
+                <p>Kombinasi buket bunga cantik di dalam kotak kado eksklusif yang bisa disandingkan dengan boneka, cokelat, lampu LED, atau hadiah lainnya.</p>
+            </div>
+
+            <!-- Layanan 3 -->
+            <div class="service-card">
+                <span class="service-icon">🛵</span>
+                <h3>Same Day Delivery</h3>
+                <p>Layanan perangkaian kilat dan pengiriman instan di hari yang sama untuk membantu Anda memberikan kejutan tak terduga dengan aman.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
