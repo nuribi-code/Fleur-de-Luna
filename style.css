@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. IMPORT FONTS (Cormorant untuk Judul Mewah & Montserrat untuk Isi Konten Premium)
+   1. IMPORT FONTS (Cormorant & Montserrat Premium)
    ========================================================================== */
 @import url('https://googleapis.com');
 
@@ -7,101 +7,84 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* 🌟 FONT ISI DIUBAH MENJADI MONTSERRAT (SANGAT ELEGAN & MINIMALIS) */
     font-family: 'Montserrat', 'Segoe UI', sans-serif;
 }
 
 /* ==========================================================================
-   2. BACKGROUND GERAK PASTEL AESTHETIC (Seluruh Halaman Web)
+   2. MOTIF BACKGROUND GERAK LUCU (Gradasi + Polkadot Mengalir)
    ========================================================================== */
 body {
-    background: linear-gradient(-45deg, #f3f7fa, #fff0f3, #f5f0ff, #f7f9fc);
-    background-size: 400% 400%;
-    animation: gerakBackground 15s ease infinite;
+    /* Menggabungkan motif polkadot pastel imut dan gradasi warna */
+    background: 
+        radial-gradient(circle, rgba(255, 183, 197, 0.2) 20%, transparent 20%),
+        radial-gradient(circle, rgba(62, 50, 100, 0.05) 20%, transparent 20%),
+        linear-gradient(-45deg, #f3f7fa, #fff0f3, #f5f0ff, #f7f9fc);
+    background-size: 40px 40px, 40px 40px, 400% 400%;
+    background-position: 0 0, 20px 20px, 0% 50%;
+    /* Gerakan dibuat lebih cepat (10 detik) agar pergeserannya sangat terlihat jelas */
+    animation: gerakMaju 10s ease infinite;
     color: #333333;
     -webkit-font-smoothing: antialiased;
 }
 
-@keyframes gerakBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@keyframes gerakMaju {
+    0% { background-position: 0 0, 20px 20px, 0% 50%; }
+    50% { background-position: 20px 20px, 40px 40px, 100% 50%; }
+    100% { background-position: 0 0, 20px 20px, 0% 50%; }
 }
 
 /* ==========================================================================
-   3. HEADER DENGAN TULISAN TINGGI & GELOMBANG ESTETIK
+   3. HEADER & NAVBAR MINIMALIS (JUDUL DISAMPING, NAVIGASI DIATAS)
    ========================================================================== */
 .main-header {
-    background: linear-gradient(-45deg, #0a192f, #0d2c54, #2a1b4e, #1a3c6d);
-    background-size: 300% 300%;
-    animation: kilauHeader 12s ease infinite;
-    color: #ffffff;
-    text-align: center;
-    padding: 75px 20px 70px 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-@keyframes kilauHeader {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.main-header::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    background-color: #ffffff; 
-    clip-path: ellipse(60% 100% at 50% 100%);
-}
-
-.main-header h1 {
-    font-family: 'Cormorant Garamond', serif; 
-    font-style: italic;                      
-    font-size: 4.2rem; 
-    font-weight: 500; 
-    margin-bottom: 5px;
-    letter-spacing: 3px;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-.main-header p {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #ffc2d1;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-/* ==========================================================================
-   4. NAVBAR LUXURY MODERN (Putih Bersih Minimalis)
-   ========================================================================== */
-.navbar {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    padding: 0;
+    background-color: #ffffff; /* Mengubah header raksasa menjadi bar putih tipis */
     box-shadow: 0 4px 20px rgba(13, 44, 84, 0.06);
     position: sticky;
     top: 0;
     z-index: 100;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between; /* Membuat judul di kiri, menu di kanan */
+    align-items: center;
+    height: 80px; /* Tinggi disetel pas dan ramping */
+}
+
+/* Tulisan Sub-judul kecil yang lama kita sembunyikan agar hemat tempat */
+.main-header p {
+    display: none; 
+}
+
+/* Judul Utama di Sebelah Kiri */
+.main-header h1 {
+    font-family: 'Cormorant Garamond', serif; 
+    font-style: italic;                      
+    font-size: 2.2rem; /* Ukuran disesuaikan agar pas di bar kiri */
+    font-weight: 600; 
+    color: #0d2c54; /* Menggunakan warna navy mewah di atas putih */
+    letter-spacing: 1px;
+}
+
+/* Area Menu Navigasi di Sebelah Kanan */
+.navbar {
+    background-color: transparent; /* Menyatu dengan background header putih */
+    box-shadow: none;
+    display: flex;
+    height: 100%;
 }
 
 .navbar a {
-    color: #334155;
+    color: #4f5d75;
     text-decoration: none;
-    padding: 22px 30px;
+    padding: 0 20px;
     font-weight: 500;
-    font-size: 0.95rem;
-    text-transform: uppercase; /* Menu dibuat huruf kapital semua agar rapi */
+    font-size: 0.85rem;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    height: 100%;
     position: relative;
     transition: all 0.3s ease;
-    letter-spacing: 1.5px;
 }
 
 .navbar a:hover, .navbar a.active {
@@ -109,6 +92,7 @@ body {
     font-weight: 600;
 }
 
+/* Garis bawah tipis manja khas web modern */
 .navbar a::after {
     content: '';
     position: absolute;
@@ -123,11 +107,11 @@ body {
 }
 
 .navbar a:hover::after, .navbar a.active::after {
-    width: 35px;
+    width: 30px;
 }
 
 /* ==========================================================================
-   5. LAYOUT KONTEN UTAMA
+   4. LAYOUT KONTEN UTAMA
    ========================================================================== */
 .content-section {
     max-width: 1200px;
@@ -137,7 +121,7 @@ body {
 }
 
 .section-title {
-    font-family: 'Cormorant Garamond', serif; /* Judul Section ikut mewah */
+    font-family: 'Cormorant Garamond', serif; 
     font-style: italic;
     color: #0d2c54;
     font-size: 2.6rem;
@@ -147,9 +131,9 @@ body {
 }
 
 /* ==========================================================================
-   6. GAYA UNTUK HALAMAN HOME & PROFILE
+   5. GAYA UNTUK HALAMAN HOME, PROFILE, SERVICE, CONTACT
    ========================================================================== */
-.home-container {
+.home-container, .profile-wrapper {
     background: transparent;
     padding: 10px 0;
     text-align: center;
@@ -236,7 +220,7 @@ body {
 }
 
 /* ==========================================================================
-   7. GAYA UNTUK HALAMAN PRODUCTS (Katalog Buket Modern)
+   6. GAYA UNTUK HALAMAN PRODUCTS (Katalog Modern Tanpa Box)
    ========================================================================== */
 .item-grid {
     display: flex;
@@ -257,7 +241,7 @@ body {
 
 .img-wrapper {
     width: 100%;
-    border-radius: 20px; /* Sudut lengkung modern minimalis */
+    border-radius: 20px; 
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(13, 44, 84, 0.05); 
 }
@@ -313,7 +297,7 @@ body {
 }
 
 /* ==========================================================================
-   8. POP-UP JENDELA TIMBUL (LUXURY POP-UP)
+   7. POP-UP JENDELA TIMBUL (LUXURY POP-UP)
    ========================================================================== */
 .modal-overlay {
     position: fixed;
@@ -326,7 +310,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    backdrop-filter: blur(4px); /* Efek blur kaca blur estetik di background modal */
+    backdrop-filter: blur(4px); 
 }
 
 .modal-box {
@@ -381,15 +365,25 @@ body {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: all 0.3s;
+border-radius: 30px;
+cursor: pointer;
+margin-top: 10px;
+transition: all 0.3s;
 }
 .btn-submit:hover { background-color: #ffb7c5; box-shadow: 0 4px 15px rgba(255, 183, 197, 0.4); }
-
-/* RESPONSIVE LAYAR HP */
+/* RESPONSIVE LAYAR HP (OTOMATIS KEMBALI VERTIKAL BILA DI LAYAR HP KECIL) */
 @media (max-width: 768px) {
+.main-header {
+flex-direction: column;
+height: auto;
+padding: 20px;
+}
+.navbar {
+margin-top: 15px;
+}
+.navbar a {
+padding: 10px 15px;
+}
 .features-grid, .item-grid {
 flex-direction: column;
 align-items: center;
