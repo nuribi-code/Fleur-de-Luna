@@ -26,7 +26,10 @@
 
     <!-- Header & Navbar Menyatu Secara Horizontal -->
     <header class="main-header">
-        <h1>Fleur de Luna</h1>
+        <div class="logo-area">
+            <h1>Fleur de Luna</h1>
+            <p style="font-size: 11px; color: #fcdede; margin-top: 2px;">A cute bouquet, make you smile</p>
+        </div>
         
         <nav class="navbar">
             <a href="home.html">Home</a>
@@ -226,8 +229,12 @@
         window.onclick = function(event) {
             if (event.target == modal) { tutupPesanan(); }
         }
-    function kirimForm(event) {
-    event.preventDefault();
-    alert('Yay! Pesanan kamu berhasil dicatat! ✨');
-    tutupPesanan();
-}
+
+        function kirimForm(event) {
+            event.preventDefault();
+            alert('Yay! Pesanan kamu berhasil dicatat! ✨');
+            tutupPesanan();
+        }
+    </script>
+</body>
+</html>
